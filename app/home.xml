@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page id="home">
+    
+    <accept id="email" />
+    <accept id="desc" />
+    
+    <import file="config/app.xml" />
+    
+    <!-- v the top one works already! v -->
+    <!--<data id="tasks" source="db" from="tasks" where="id={taskId} and desc like {desc}" />-->
+    <data id="tasks" source="db" from="tasks" />
+    
+    <top>
+        <button type="back">Back</button>
+        <title>My home page</title>
+        <!--<auth requireLogin="true">
+            <button to="logout">Logout</button>
+        </auth>-->
+        <!--<auth requireLogin="false">
+            <button to="login">Login</button>
+        </auth>-->
+    </top>
+    <content>
+        
+        <form to="login">
+            <field id="email">E-Mail address</field>
+            <field type="password" id="pass">Password</field>
+            <button type="submit">Login</button>
+        </form>
+        
+        <!--<list data="tasks" filter="true" />-->
+        
+    </content>
+    <bottom>
+        <!--<nav>
+            <item to="options.xml" icon="gear">Options</item>
+            <item to="signup.xml" icon="plus">Sign up</item>
+        </nav>-->
+    </bottom>
+</page>
